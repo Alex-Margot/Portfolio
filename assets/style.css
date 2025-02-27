@@ -177,7 +177,7 @@ section:hover {
     max-width: 600px;
     margin: 40px auto;
     padding: 20px;
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
     text-align: center;
@@ -247,86 +247,123 @@ section:hover {
 .hidden-letter {
     cursor: pointer;
     transition: color 0.3s ease;
+    user-select: none;
 }
 
 .hidden-letter:hover {
-    color: red; /* Highlight the X when hovered */
+    color: red; /* Highlight when hovered */
+}
+
+.hidden-word {
+    cursor: pointer;
+    transition: color 0.3s ease;
+    user-select: none;
+}
+
+.hidden-word:hover {
+    color: red; /* Highlight when hovered */
 }
 
 /* Initially hide the extra links */
-.hidden-links {
+.hidden-links, .extrahidden-links {
     display: none;
     margin-top: 10px;
 }
 
-.hidden-links p {
+.hidden-links p, .extrahidden-links p {
     font-size: 16px;
-    font-weight: bold;
+    /*font-weight: bold;*/
 }
 
-.hidden-links li {
+.hidden-links li, .extrahidden-links li {
     display: inline;
     margin-right: 15px;
     margin-bottom: 10px;
 }
 
-.hidden-links a {
+.hidden-links a, .extrahidden-links a {
     text-decoration: none;
     color: #888;
+    font-weight: bold;
     font-size: 14px;
     transition: color 0.3s ease;
 }
 
-.hidden-links a:hover {
+.hidden-links a:hover, .extrahidden-links a:hover {
     color: #f00;
 }
 
+
+/* ============================= */
+/* === New Styles for Skills === */
+/* ============================= */
+
 .skills-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 skills per row on desktop */
-    gap: 20px;
-    margin-top: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Adjust the number of skills per row based on screen size */
+    gap: 40px;
+    margin-top: 30px;
+    padding: 0 20px;
 }
 
 .skill {
-    background: rgba(255, 255, 255, 0.3);
-    border-radius: 10px;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+    background: rgba(255, 255, 255, 0.1); /* Lighter background for a more subtle effect */
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* Softer shadow for better elevation effect */
     text-align: center;
-    backdrop-filter: blur(10px);
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
-    position: relative; /* Required for maintaining aspect ratio */
-    aspect-ratio: 1; /* This ensures the box stays square */
+    padding: 30px;
+    transition: all 0.3s ease-in-out; /* Smooth transitions for hover and scaling */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
 }
 
 .skill h3 {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-    color: mediumpurple;
-    position: absolute; /* Positioning title in the center */
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .skill p {
-    font-size: 1rem;
-    font-weight: bold;
-    color: #888;
+    font-size: 1.1rem;
+    font-weight: normal;
+    color: #ccc;
+    margin-bottom: 15px;
 }
 
-/* Elevation effect on hover */
 .skill:hover {
-    transform: translateY(-10px); /* Lift the skill card slightly */
-    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3); /* Stronger shadow to emphasize elevation */
+    transform: translateY(-12px); /* Lift the skill card on hover */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3); /* More pronounced shadow */
+    background: rgba(255, 255, 255, 0.2); /* Subtle background change on hover */
 }
 
-/* Responsive Design: 2 skills per row on smaller screens (phones) */
+.skill:hover h3 {
+    color: #f39c12; /* Change header color on hover for emphasis */
+}
+
+.skill:hover p {
+    color: #fff; /* Lighten the paragraph text on hover */
+}
+
+/* Responsive Design: Adjust grid for small devices */
 @media (max-width: 768px) {
     .skills-container {
-        grid-template-columns: repeat(2, 1fr); /* 2 skills per row on phone */
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* 2+ skills per row on smaller screens */
+        padding: 0 10px;
     }
 }
+
+@media (max-width: 480px) {
+    .skills-container {
+        grid-template-columns: 1fr; /* Single column on very small screens */
+    }
+}
+
 
 /* Stealth link styling */
 .stealth-link {
@@ -336,4 +373,115 @@ section:hover {
 
 .stealth-link:hover {
     color: inherit; /* No change on hover */
+}
+
+#languageToggle {
+    display: inline; /* Ensures the element is inline with surrounding content */
+    cursor: pointer; /* Makes it appear clickable */
+    user-select: none; /* Prevents text selection */
+}
+
+/* ============================== */
+/* === Unique Styles for Projects === */
+/* ============================== */
+
+/* Container for the projects section */
+.projects {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 30px;
+    background: #1c1c1c;
+    border-radius: 20px;
+    box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.4);
+    color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+
+.projects:hover {
+    /*background: #333;*/
+}
+
+/* Each individual project container */
+.project {
+    width: 100%;
+    max-width: 350px;
+    background: linear-gradient(145deg, #4b4b4b, #2a2a2a);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    text-align: center;
+}
+
+.project:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+    background: linear-gradient(145deg, #000000 15%, #ff4500 85%);
+}
+
+/* Project titles */
+.project h3 {
+    font-size: 1.7rem;
+    color: #f0f0f0;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+.project h3:hover {
+    color: #ff6347;
+}
+
+/* Project description text */
+.project p {
+    font-size: 1.1rem;
+    color: #b0b0b0;
+    margin-bottom: 15px;
+    line-height: 1.5;
+    opacity: 0.8;
+}
+
+/* Project links */
+.project a {
+    display: inline-block;
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    color: #fff;
+    background-color: #ff6347;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.project a:hover {
+    background-color: #ff4500;
+    transform: scale(1.1);
+}
+
+/* Project layout on small screens */
+@media (max-width: 768px) {
+    .projects {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .project {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .project h3 {
+        font-size: 1.5rem;
+    }
+
+    .project p {
+        font-size: 1rem;
+    }
+
+    .project a {
+        font-size: 1rem;
+    }
 }

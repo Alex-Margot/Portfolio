@@ -1,37 +1,36 @@
 <?php
-$file_path_fr = $_SERVER['DOCUMENT_ROOT'] . '\data\projects_fr.json';
-$file_contents_fr = file_get_contents($file_path_fr);
+$file_path = $_SERVER['DOCUMENT_ROOT'] . '/data/projects.json';
+$file_contents = file_get_contents($file_path);
 
-$file_path_en = $_SERVER['DOCUMENT_ROOT'] . '\data\projects_en.json';
-$file_contents_en = file_get_contents($file_path_en);
-
-if ($file_contents_fr === false || $file_contents_en === false) {
+if ($file_contents === false) {
     echo "Error loading file!";
     exit();
 }
 
-$projects_fr = json_decode($file_contents_fr, true);
-$projects_en = json_decode($file_contents_en, true);
+$projects = json_decode($file_contents, true);
 
-if ($projects_fr === null || $projects_en === null) {
+if ($projects === null) {
     echo "Error decoding JSON!";
     exit();
 }
-?>
 
+// Détecte la langue (par défaut en français)
+$lang = isset($_GET['lang']) && $_GET['lang'] === 'en' ? 'en' : 'fr';
+?>
+<center><h2>Here is my recents projects</h2></center>
 <div class="projects" id="projects-container">
-    <?php foreach ($projects_fr as $index => $project_fr): ?>
+    <?php foreach ($projects as $project_key => $project_data): ?>
         <div class="project">
-            <h3 data-fr="<?php echo htmlspecialchars($project_fr['title']); ?>"
-                data-en="<?php echo htmlspecialchars($projects_en[$index]['title']); ?>">
-                <?php echo htmlspecialchars($project_fr['title']); ?>
+            <h3 data-fr="<?php echo htmlspecialchars($project_data['fr']['title']); ?>"
+                data-en="<?php echo htmlspecialchars($project_data['en']['title']); ?>">
+                <?php echo htmlspecialchars($project_data[$lang]['title']); ?>
             </h3>
-            <p data-fr="<?php echo htmlspecialchars($project_fr['description']); ?>"
-               data-en="<?php echo htmlspecialchars($projects_en[$index]['description']); ?>">
-                <?php echo htmlspecialchars($project_fr['description']); ?>
+            <p data-fr="<?php echo htmlspecialchars($project_data['fr']['description']); ?>"
+               data-en="<?php echo htmlspecialchars($project_data['en']['description']); ?>">
+                <?php echo htmlspecialchars($project_data[$lang]['description']); ?>
             </p>
-            <a href="<?php echo htmlspecialchars($project_fr['link']); ?>" target="_blank">
-                <?php echo "Lien"; ?>
+            <a href="<?php echo htmlspecialchars($project_data[$lang]['link']); ?>" target="_blank">
+                Lien
             </a>
         </div>
     <?php endforeach; ?>

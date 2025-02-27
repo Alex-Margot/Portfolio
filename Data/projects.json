@@ -1,0 +1,41 @@
+[
+  {
+    "id": "firstProject",
+    "fr": {
+      "title": "Mon premier projet",
+      "description": "Un projet qui montre mes compétences en développement web.",
+      "link": "https://feur.com"
+    },
+    "en": {
+      "title": "My first project",
+      "description": "bla bla bla in english.",
+      "link": "https://feur.com"
+    }
+  },
+  {
+    "id": "mobileApp",
+    "fr": {
+      "title": "Application mobile",
+      "description": "Une application mobile développée avec React Native.",
+      "link": "https://feur.com"
+    },
+    "en": {
+      "title": "Mobile App",
+      "description": "A mobile application developped with React Native.",
+      "link": "https://feur.com"
+    }
+  },
+  {
+    "id": "testProject",
+    "fr": {
+      "title": "test manuel",
+      "description": "ceci est un projet de test ajouté manuellement dans le fichier json",
+      "link": "https://feur.com"
+    },
+    "en": {
+      "title": "manual test",
+      "description": "this is a project manually added in the json file",
+      "link": "https://feur.com"
+    }
+  }
+]

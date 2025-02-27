@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Soft Skills</title>
-    <link rel="stylesheet" href="/assets/style.css">
 </head>
 <body>
 
@@ -29,11 +28,7 @@
             <h3>Adaptability</h3>
             <p>Adjusting to new situations and challenges with ease</p>
         </div>
-        <!-- Add more soft skills as needed -->
     </div>
 </main>
-
-<?php include 'footer.php'; ?>
-
 </body>
 </html>
