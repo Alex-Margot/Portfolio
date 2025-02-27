@@ -1,0 +1,9 @@
+/* Stealth link styling */
+.stealth-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.stealth-link:hover {
+    color: inherit;
+}

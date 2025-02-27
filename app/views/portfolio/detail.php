@@ -8,6 +8,7 @@
 <body>
     <h1><?= htmlspecialchars($projet['title']); ?></h1>
     <p><?= htmlspecialchars($projet['description']); ?></p>
+    <p><?= htmlspecialchars($projet['link']); ?></p>
     <a href="/portfolio">Back to Portfolio</a>
 </body>
 </html>

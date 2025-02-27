@@ -11,7 +11,7 @@ if (file_exists($pagePath)) {
     include $pagePath;
     include __DIR__ . "/app/views/includes/footer.php";
 } else {
-    include __DIR__ . "/app/views/includes/header.php";
-    echo "<h2>Erreur 404</h2><p>La page demandée n'existe pas.</p>";
-    include __DIR__ . "/app/views/includes/footer.php";
+    //include __DIR__ . "/app/views/includes/header.php";
+    include $pagePath = __DIR__ . "/app/views/404.php";
+    //include __DIR__ . "/app/views/includes/footer.php";
 }
