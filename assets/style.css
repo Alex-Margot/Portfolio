@@ -537,11 +537,31 @@ body {
     line-height: 1.5;
 }
 
-/* Right Resume Section */
+/* Container for Resume */
 .cv-container {
-    flex: 1;
     display: flex;
-    justify-content: center;
+    justify-content: center; /* Horizontally center the iframe */
+    align-items: center; /* Vertically center the iframe */
+    transition: all 0.3s ease; /* Smooth transition for all properties */
+    height: 500px; /* Initial height */
+    width: 50%; /* Set a max width */
+    margin: 0 auto;
+    position: relative;
+}
+
+/* The iframe inside the container */
+.cv-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out; /* Smooth scaling of iframe */
+    object-fit: cover; /* Ensure the content fits without distortion */
+}
+
+/* Apply scaling effect on iframe for more emphasis */
+.cv-container:hover iframe {
+    transform: scale(1.2); /* Enlarge the iframe */
 }
 
 #cv {
