@@ -19,8 +19,7 @@ $language = isset($_COOKIE['language']) ? $_COOKIE['language'] : 'en';
         <a href="/?page=home" data-fr="Accueil" data-en="Home">Accueil</a>
         <a href="/?page=me" data-fr="A propos" data-en="About me">A propos</a>
         <a href="/?page=projects" data-fr="Projets" data-en="Projects">Projets</a>
-        <a href="/?page=hardskills" data-fr="Compétences techniques" data-en="Hard skills">Compétences</a>
-        <a href="/?page=softskills" data-fr="Compétences" data-en="Soft skills">Compétences</a>
+        <a href="/?page=skills" data-fr="Compétences" data-en="Skills">Compétences</a>
         <a href="/?page=contact" data-fr="Coordonnées" data-en="Contact">Coordonnées</a>
     </nav>
 </header>

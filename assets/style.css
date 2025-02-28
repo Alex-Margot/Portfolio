@@ -166,7 +166,7 @@ section:hover {
 
 /* Transition de couleur de fond au survol */
 section:hover {
-    background-color: #4c515f; /* Un peu plus clair pour le survol */
+    background-color: #1c1c1c; /* Un peu plus clair pour le survol */
 }
 
 /* ============================= */
@@ -485,3 +485,82 @@ section:hover {
         font-size: 1rem;
     }
 }
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #fff;
+}
+
+/* About Me Section */
+.about-me {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #000;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Title */
+.about-me h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Flexbox Layout */
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+    gap: 20px;
+}
+
+/* Left Text Section */
+.about-text {
+    flex: 1;
+    color: white;
+}
+
+.about-text h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.about-text p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Right Resume Section */
+.cv-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+#cv {
+    width: 100%;
+    height: 500px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .cv-container {
+        width: 100%;
+    }
+}
+
