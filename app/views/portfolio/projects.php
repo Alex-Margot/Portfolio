@@ -17,7 +17,8 @@ if ($projects === null) {
 // Détecte la langue (par défaut en français)
 $lang = isset($_GET['lang']) && $_GET['lang'] === 'en' ? 'en' : 'fr';
 ?>
-<center><h2>Here is my recents projects</h2></center>
+<center><h2 data-fr="Voici mes projets récents"
+            data-en="Here is my recents projects">Voici mes projets récents</h2></center>
 <div class="projects" id="projects-container">
     <?php foreach ($projects as $project_key => $project_data): ?>
         <div class="project">
@@ -35,3 +36,4 @@ $lang = isset($_GET['lang']) && $_GET['lang'] === 'en' ? 'en' : 'fr';
         </div>
     <?php endforeach; ?>
 </div>
+<br><br><br>
