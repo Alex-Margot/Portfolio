@@ -62,11 +62,6 @@
                 <p data-fr="S'adapter facilement à de nouvelles situations et à de nouveaux défis"
                    data-en="Adjusting to new situations and challenges with ease"></p>
             </div>
-            <div class="skill">
-                <h3 data-fr="Adaptabilité" data-en="Adaptability">Adaptability</h3>
-                <p data-fr="S'adapter facilement à de nouvelles situations et à de nouveaux défis"
-                   data-en="Adjusting to new situations and challenges with ease"></p>
-            </div>
         </div>
     </section>
 </main>

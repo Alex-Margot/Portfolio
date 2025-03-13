@@ -1,28 +1,28 @@
 [
   {
-    "id": "firstProject",
+    "id": "Portfolio",
     "fr": {
-      "title": "Mon premier projet",
+      "title": "Mon Portfolio",
       "description": "Un projet qui montre mes compétences en développement web.",
-      "link": "https://feur.com"
+      "link": "http://localhost:8080"
     },
     "en": {
-      "title": "My first project",
-      "description": "bla bla bla in english.",
-      "link": "https://feur.com"
+      "title": "My Portfolio",
+      "description": "A project that show my skills in web developpement",
+      "link": "http://localhost:8080"
     }
   },
   {
-    "id": "mobileApp",
+    "id": "PreTPI",
     "fr": {
-      "title": "Application mobile",
-      "description": "Une application mobile développée avec React Native.",
-      "link": "https://feur.com"
+      "title": "Tower Defence en 2D",
+      "description": "Un jeu de tower defence en 2d developpé sur Unity",
+      "link": "http://localhost:8080"
     },
     "en": {
-      "title": "Mobile App",
-      "description": "A mobile application developped with React Native.",
-      "link": "https://feur.com"
+      "title": "2D Tower Defence",
+      "description": "A 2d tower defence game developped in Unity",
+      "link": "http://localhost:8080"
     }
   },
   {
