@@ -26,7 +26,7 @@
         </div>
 
         <div class="cv-container">
-            <iframe id="cv" src="https://drive.google.com/file/d/1uXV8IlwH9FVUhJwzXMs2mCzUsxOn_hG3/preview"></iframe>
+            <iframe id="cv" src="https://drive.google.com/file/d/1caDLXWq7Fxnb6rAto2kH88GExSjdLo_J/preview"></iframe>
         </div>
     </div>
 </section>
