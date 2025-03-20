@@ -1,12 +1,11 @@
-/* ============================= */
-/* === RESET & BASE STYLES ===== */
-/* ============================= */
+/* RESET : Réinitialise les marges et padding */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Corps du site */
 body {
     font-family: 'Arial', sans-serif;
     background-color: black;
@@ -14,36 +13,16 @@ body {
     line-height: 1.6;
     overflow-x: hidden;
     transition: all 0.3s ease-in-out;
+}
+
+/* Animation d’apparition pour le body */
+body {
     animation: fadeIn 1.5s ease-out;
 }
 
-/* General links */
-a {
-    text-decoration: none;
-}
-
-/* Keyframes */
-@keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-}
-
-@keyframes slideIn {
-    0% {
-        transform: translateY(-50px);
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-/* ============================= */
-/* ===== HEADER & NAVIGATION ==== */
-/* ============================= */
+/* Header */
 header {
-    background: linear-gradient(135deg, #0e0e2c, #8e44ad);
+    background: linear-gradient(135deg, #0e0e2c, #8e44ad); /* Fond foncé avec un gradient */
     color: white;
     padding: 20px;
     text-align: center;
@@ -53,6 +32,7 @@ header {
     z-index: 10;
 }
 
+/* Animation du titre principal */
 header h1 {
     font-size: 2.5rem;
     letter-spacing: 1px;
@@ -60,6 +40,7 @@ header h1 {
     animation: slideIn 1s ease-out;
 }
 
+/* Menu de navigation */
 nav {
     margin-top: 10px;
 }
@@ -68,14 +49,16 @@ nav a {
     color: white;
     font-size: 1.2rem;
     margin: 0 15px;
+    text-decoration: none;
     position: relative;
     transition: color 0.3s ease-in-out;
 }
 
 nav a:hover {
-    color: #f39c12;
+    color: #f39c12; /* Couleur jaune doré */
 }
 
+/* Effet de survol sur les liens de navigation */
 nav a::before {
     content: '';
     position: absolute;
@@ -83,7 +66,7 @@ nav a::before {
     height: 3px;
     bottom: -5px;
     left: 0;
-    background: #f39c12;
+    background: #f39c12; /* Jaune doré */
     transform: scaleX(0);
     transition: transform 0.3s ease-in-out;
 }
@@ -92,15 +75,14 @@ nav a:hover::before {
     transform: scaleX(1);
 }
 
-/* ============================= */
-/* ===== MAIN SECTION ========== */
-/* ============================= */
+/* Section principale */
 main {
     padding: 40px 20px;
     background-color: black;
     transition: all 0.3s ease-in-out;
 }
 
+/* Animation d’apparition des sections */
 h2 {
     font-size: 2rem;
     margin-bottom: 20px;
@@ -116,28 +98,31 @@ p {
     animation: fadeIn 2s forwards;
 }
 
-/* Sections */
-section {
-    margin: 20px 0;
-    padding: 20px;
-    background-color: black;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    transform: scale(1);
-    transition: all 0.3s ease-in-out;
+/* Animation de fadeIn */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
-section:hover {
-    transform: scale(1.05);
-    background-color: #1c1c1c;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+/* Animation de slideIn */
+@keyframes slideIn {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
-/* ============================= */
-/* ===== FOOTER ================ */
-/* ============================= */
+/* Footer */
 footer {
-    background-color: #0e0e2c;
+    background-color: #0e0e2c; /* Bleu nuit foncé */
     color: white;
     text-align: center;
     padding: 20px;
@@ -148,6 +133,7 @@ footer {
     width: 100%;
 }
 
+/* Animations du footer */
 footer p {
     font-size: 1rem;
     letter-spacing: 0.5px;
@@ -155,88 +141,38 @@ footer p {
     animation: fadeIn 3s forwards;
 }
 
+/* Effet de hover sur le footer */
 footer p:hover {
-    color: #f39c12;
+    color: #f39c12; /* Jaune doré */
     cursor: pointer;
 }
 
-/* ============================= */
-/* === ABOUT ME SECTION ======== */
-/* ============================= */
-.about-me {
-    max-width: 900px;
-    margin: 40px auto;
+/* Effet de survol sur les sections */
+section {
+    margin: 20px 0;
     padding: 20px;
-    background: #000;
+    background-color: black;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transform: scale(1);
+    transition: all 0.3s ease-in-out;
 }
 
-.about-me h1 {
-    font-size: 2rem;
-    margin-bottom: 20px;
+
+section:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
-.about-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    text-align: left;
-    gap: 20px;
-}
-
-.about-text {
-    flex: 1;
-    color: white;
-}
-
-.about-text h2 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-}
-
-.about-text p {
-    font-size: 1rem;
-    line-height: 1.5;
-}
-
-/* CV Container */
-.cv-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 500px;
-    width: 50%;
-    margin: 0 auto;
-    position: relative;
-    transition: all 0.3s ease;
-}
-
-.cv-container iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
-    border-radius: 8px;
-    transition: transform 0.3s ease-in-out;
-    object-fit: cover;
-}
-
-.cv-container:hover iframe {
-    transform: scale(1.2);
-}
-
-#cv {
-    width: 100%;
-    height: 500px;
-    border: none;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+/* Transition de couleur de fond au survol */
+section:hover {
+    background-color: #1c1c1c; /* Un peu plus clair pour le survol */
 }
 
 /* ============================= */
-/* ===== CONTACT SECTION ======= */
+/* === Styles pour Coordonnées === */
 /* ============================= */
+
 .contact-container {
     max-width: 600px;
     margin: 40px auto;
@@ -269,6 +205,7 @@ footer p:hover {
 
 .contact-container a {
     color: #ff6b6b;
+    text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease-in-out;
 }
@@ -277,9 +214,178 @@ footer p:hover {
     color: #ff3b3b;
 }
 
+/* Secret Trigger Button */
+.close-btn {
+    cursor: pointer;
+    color: red;
+    font-weight: bold;
+    margin-left: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.close-btn:hover {
+    transform: scale(1.2);
+}
+
+/* Hidden Secret Game Page */
+.secret-game {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+}
+
+/* Style the 'X' clickable letter */
+.hidden-letter {
+    cursor: pointer;
+    transition: color 0.3s ease;
+    user-select: none;
+}
+
+.hidden-letter:hover {
+    color: red; /* Highlight when hovered */
+}
+
+.hidden-word {
+    cursor: pointer;
+    transition: color 0.3s ease;
+    user-select: none;
+}
+
+.hidden-word:hover {
+    color: red; /* Highlight when hovered */
+}
+
+/* Initially hide the extra links */
+.hidden-links, .extrahidden-links {
+    display: none;
+    margin-top: 10px;
+}
+
+.hidden-links p, .extrahidden-links p {
+    font-size: 16px;
+    /*font-weight: bold;*/
+}
+
+.hidden-links li, .extrahidden-links li {
+    display: inline;
+    margin-right: 15px;
+    margin-bottom: 10px;
+}
+
+.hidden-links a, .extrahidden-links a {
+    text-decoration: none;
+    color: #888;
+    font-weight: bold;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.hidden-links a:hover, .extrahidden-links a:hover {
+    color: #f00;
+}
+
+
 /* ============================= */
-/* ==== PROJECTS SECTION ======= */
+/* === New Styles for Skills === */
 /* ============================= */
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Adjust the number of skills per row based on screen size */
+    gap: 40px;
+    margin-top: 30px;
+    padding: 0 20px;
+}
+
+.skill {
+    background: rgba(255, 255, 255, 0.1); /* Lighter background for a more subtle effect */
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* Softer shadow for better elevation effect */
+    text-align: center;
+    padding: 30px;
+    transition: all 0.3s ease-in-out; /* Smooth transitions for hover and scaling */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.skill h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.skill p {
+    font-size: 1.1rem;
+    font-weight: normal;
+    color: #ccc;
+    margin-bottom: 15px;
+}
+
+.skill:hover {
+    transform: translateY(-12px); /* Lift the skill card on hover */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3); /* More pronounced shadow */
+    background: rgba(255, 255, 255, 0.2); /* Subtle background change on hover */
+}
+
+.skill:hover h3 {
+    color: #f39c12; /* Change header color on hover for emphasis */
+}
+
+.skill:hover p {
+    color: #fff; /* Lighten the paragraph text on hover */
+}
+
+/* Responsive Design: Adjust grid for small devices */
+@media (max-width: 768px) {
+    .skills-container {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* 2+ skills per row on smaller screens */
+        padding: 0 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .skills-container {
+        grid-template-columns: 1fr; /* Single column on very small screens */
+    }
+}
+
+
+/* Stealth link styling */
+.stealth-link {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit color from parent element */
+}
+
+.stealth-link:hover {
+    color: inherit; /* No change on hover */
+}
+
+#languageToggle {
+    display: inline; /* Ensures the element is inline with surrounding content */
+    cursor: pointer; /* Makes it appear clickable */
+    user-select: none; /* Prevents text selection */
+}
+
+/* ============================== */
+/* === Unique Styles for Projects === */
+/* ============================== */
+
+/* Container for the projects section */
 .projects {
     max-width: 1100px;
     margin: 40px auto;
@@ -287,12 +393,18 @@ footer p:hover {
     background: #1c1c1c;
     border-radius: 20px;
     box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.4);
+    color: #fff;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     gap: 20px;
 }
 
+.projects:hover {
+    /*background: #333;*/
+}
+
+/* Each individual project container */
 .project {
     width: 100%;
     max-width: 350px;
@@ -310,6 +422,7 @@ footer p:hover {
     background: linear-gradient(145deg, #000000 20%, #ff4500 80%);
 }
 
+/* Project titles */
 .project h3 {
     font-size: 1.7rem;
     color: #f0f0f0;
@@ -321,6 +434,7 @@ footer p:hover {
     color: #ff6347;
 }
 
+/* Project description text */
 .project p {
     font-size: 1.1rem;
     color: #b0b0b0;
@@ -329,6 +443,7 @@ footer p:hover {
     opacity: 0.8;
 }
 
+/* Project links */
 .project a {
     display: inline-block;
     padding: 12px 25px;
@@ -336,6 +451,7 @@ footer p:hover {
     color: #fff;
     background-color: #ff6347;
     border-radius: 10px;
+    text-decoration: none;
     font-weight: bold;
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
@@ -345,44 +461,126 @@ footer p:hover {
     transform: scale(1.1);
 }
 
-/* ============================= */
-/* ===== SKILLS SECTION ======== */
-/* ============================= */
-.skills-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 40px;
-    margin-top: 30px;
-    padding: 0 20px;
+/* Project layout on small screens */
+@media (max-width: 768px) {
+    .projects {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .project {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .project h3 {
+        font-size: 1.5rem;
+    }
+
+    .project p {
+        font-size: 1rem;
+    }
+
+    .project a {
+        font-size: 1rem;
+    }
 }
 
-.skill {
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 15px;
-    padding: 25px;
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #fff;
+}
+
+/* About Me Section */
+.about-me {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #000;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
-    transition: transform 0.3s ease, background 0.3s ease;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-.skill:hover {
-    transform: translateY(-8px);
-    background: rgba(255, 255, 255, 0.15);
+/* Title */
+.about-me h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
 }
 
-.skill i {
-    font-size: 2.5rem;
-    color: #f39c12;
-    margin-bottom: 15px;
+/* Flexbox Layout */
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+    gap: 20px;
 }
 
-.skill h3 {
-    font-size: 1.4rem;
+/* Left Text Section */
+.about-text {
+    flex: 1;
+    color: white;
+}
+
+.about-text h2 {
+    font-size: 1.5rem;
     margin-bottom: 10px;
 }
 
-.skill p {
+.about-text p {
     font-size: 1rem;
     line-height: 1.5;
-    color: #ddd;
 }
+
+/* Container for Resume */
+.cv-container {
+    display: flex;
+    justify-content: center; /* Horizontally center the iframe */
+    align-items: center; /* Vertically center the iframe */
+    transition: all 0.3s ease; /* Smooth transition for all properties */
+    height: 500px; /* Initial height */
+    width: 50%; /* Set a max width */
+    margin: 0 auto;
+    position: relative;
+}
+
+/* The iframe inside the container */
+.cv-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out; /* Smooth scaling of iframe */
+    object-fit: cover; /* Ensure the content fits without distortion */
+}
+
+/* Apply scaling effect on iframe for more emphasis */
+.cv-container:hover iframe {
+    transform: scale(1.2); /* Enlarge the iframe */
+}
+
+#cv {
+    width: 100%;
+    height: 500px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .cv-container {
+        width: 100%;
+    }
+}
+
