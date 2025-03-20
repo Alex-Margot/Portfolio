@@ -336,6 +336,20 @@ section:hover {
     margin-bottom: 15px;
 }
 
+.skill-section {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3); /* More pronounced shadow */
+    margin: 20px 0;
+    padding: 20px;
+    background-color: black;
+    border-radius: 10px;
+    /*transform: scale(1);*/
+    transition: all 0.3s ease-in-out;
+}
+
+.skill-section:hover {
+    background: rgba(255, 255, 255, 0.1); /* Subtle background change on hover */
+}
+
 .skill:hover {
     transform: translateY(-12px); /* Lift the skill card on hover */
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3); /* More pronounced shadow */
@@ -584,3 +598,43 @@ body {
     }
 }
 
+.carousel-container {
+    position: relative;
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-slide {
+    display: flex;
+    justify-content: space-around;
+    min-width: 100%;
+}
+
+.skill {
+    background: #333;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    flex: 1;
+    margin: 10px;
+    text-align: center;
+}
+
+button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+button.prev { left: 10px; }
+button.next { right: 10px; }
